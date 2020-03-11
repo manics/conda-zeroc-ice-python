@@ -24,9 +24,9 @@ jobs:
     displayName: build
 
 - job:
-  displayName: macOS-10.15
+  displayName: macOS-10.14
   pool:
-    vmImage: 'macOS-10.15'
+    vmImage: 'macOS-10.14'
   strategy:
     matrix:
       Python36:
