@@ -61,12 +61,14 @@ jobs:
     displayName: Create Anaconda environment
 
   - script: |
-      set
+      call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\Build\vcvars64.bat"
       echo 1
       conda info -a
       echo 2
-      conda build --python %PYTHON_VERSION% .
+      set
       echo 3
+      conda build --python %PYTHON_VERSION% .
+      echo 4
     displayName: build
 
   - script: |
