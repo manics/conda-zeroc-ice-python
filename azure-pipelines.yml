@@ -63,6 +63,7 @@ jobs:
     displayName: Create Anaconda environment
 
   - script: |
+      set
       echo 1
       call activate omerobuild
       echo 2
@@ -71,3 +72,16 @@ jobs:
       conda build --python %PYTHON_VERSION% .
       echo 4
     displayName: build
+
+  - script: |
+      set
+    displayName: a
+
+  - script: |
+      conda info
+    displayName: b
+
+  - script: |
+      conda activate omerobuild
+      conda list
+    displayName: c
